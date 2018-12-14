@@ -1,3 +1,25 @@
-<p>
-  HospitalView works!
-</p>
+<div class="col-md-6">
+  <h2> Hospital Details</h2>
+  <button class="btn btn-danger"> Sort By Hospital Name</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+
+        <th>Hospital Name</th>
+        <th>Contact Number</th>
+        <th>View Department</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let hospital of hospitals ">
+
+        <td>{{hospital.hospitalname}}</td>
+        <td>{{hospital.contactnumber}}</td>
+
+        <td>
+          <button class="btn btn-primary" style="margin-left: 20px;" (click)="navigateTo(hospital.hospitalname)"> View</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

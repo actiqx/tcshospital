@@ -1,3 +1,28 @@
-<p>
-  DepartmentView works!
-</p>
+<div class="col-md-6">
+  <h2> Hospital Details</h2>
+  <button class="btn btn-primary mr-3 mb-3"> Sort By Department Name</button>
+  <button class="btn btn-primary mr-3 mb-3" (click)="goBack()"> Back</button>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+
+        <th>Department Name</th>
+        <th>Head</th>
+        <th>Contact Number</th>
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let department of departments ">
+
+        <td>{{department.departmentname}}</td>
+        <td>{{department.head}}</td>
+        <td>{{department.contactnumber}}</td>
+
+        <td>
+          <button class="btn btn-primary" style="margin-left: 20px;" (click)="navigateTo(hospital.hospitalname)"> View</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
